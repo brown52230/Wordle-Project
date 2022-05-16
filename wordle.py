@@ -34,14 +34,14 @@ def board(guess, turnsLeft, guesses):
 
                 for k in temp:
                     if (k == j): 
-                        print("({})".format(i), end = '')
+                        print("({}) ".format(i), end = '')
                         found = True
                         break
                 if (found == False):
                     print(".{}. ".format(i), end = '',)
             print("")
     for i in range(turnsLeft):  
-        print("- - - - -")
+        print(" -   -   -   -   -")
 
 
 global word
@@ -59,6 +59,8 @@ while solved != True and turnsLeft > 0:
     turnsLeft -= 1
     guesses.append(guess)
     turnCounter += 1
-    if (guess == word): solved = True
+    if (guess == word):
+        solved = True
+        board(guess, turnsLeft, guesses)
 exit()
 
