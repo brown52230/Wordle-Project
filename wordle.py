@@ -28,20 +28,20 @@ def board(guess, turnsLeft, guesses):
             for i, j in zip(temp, word):
                 found = False
                 if (i == j) :
-                    print("[{}] ".format(i), end = '');
+                    print(u"\u001b[42m{}\033[0m ".format(i), end = '');
                     found = True
                     continue
 
                 for k in temp:
                     if (k == j): 
-                        print("({}) ".format(i), end = '')
+                        print(u"\u001b[43m{}}\033[0m ".format(i), end = '')
                         found = True
                         break
                 if (found == False):
                     print(".{}. ".format(i), end = '',)
             print("")
     for i in range(turnsLeft):  
-        print(" -   -   -   -   -")
+        print("- - - - -")
 
 
 global word
