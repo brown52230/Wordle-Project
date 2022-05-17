@@ -8,7 +8,7 @@ void board(string, int, string[]);
 
 int main()
 {
-    system("clear");
+    system("cls");
     bool solved = false;
     string guess;
     int turnsLeft = 6;
@@ -19,7 +19,7 @@ int main()
 
     do
     {
-        system("clear");
+        system("cls");
         board(guess, turnsLeft, guesses);
         guess = guessLetter();
         if (guess == word)
@@ -34,7 +34,7 @@ int main()
         }
     } while (solved == false && turnsLeft > 0);
 
-    system("clear");
+    system("cls");
     board(guess, turnsLeft, guesses);
     cout << "The word was \u001b[42m\u001b[30m " << word << " \033[0m!" << endl;
     cout << turnCounter << " turns used" << endl;
@@ -112,7 +112,7 @@ void board(string guess, int turnsLeft, string guesses[])
 void instructions()
 {
     cout << "Welcome to Wordle! (But made in C++ very poorly.)" << endl;
-    cout << "This game uses ANSI color codes,so some terminals\n may not be able to support this." << endl;
+    cout << "This game uses ANSI color codes, so some terminals \nmay not be able to support this." << endl;
     cout << endl;
     cout << "If you cant see the rainbow below, your terminal \nmay not be supported." << endl;
     cout << "\n\u001b[41m   \u001b[43m   \u001b[42m   \u001b[44m   \u001b[45m   \u001b[47m   \u001b[0m" << endl;

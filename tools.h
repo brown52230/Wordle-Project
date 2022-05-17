@@ -12,7 +12,6 @@
 #include <chrono>
 
 using namespace std;
-using namespace std::chrono_literals;
 
 string wordSelect()
 {
